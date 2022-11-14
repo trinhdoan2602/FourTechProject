@@ -24,21 +24,21 @@
         </div>
         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12"></div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-          <h2>Address</h2>
+          <h2>{{ $t("footer.address") }}</h2>
           <div class="block-address">
             <img class="img-address" src="~/assets/images/locationFooter.png" alt="" />
-            <p>Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
-            <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+            <p>{{ $t("footer.location_one") }}</p>
+            <p>{{ $t("footer.location_two") }}</p>
           </div>
           <div class="block-address">
             <img class="img-address" src="~/assets/images/mobileFooter.png" alt="" />
-            <p>(+1) 555-0108-000 or (+236) 555-0108</p>
+            <p>(+1) 555-0108-000 {{ $t("footer.or") }} (+236) 555-0108</p>
           </div>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-          <h2>Subscribe</h2>
+          <h2>{{ $t("footer.subscribe") }}</h2>
           <div class="text-subscribe">
-            <p>Subscribe to our newsletter and be the first to know about our updates</p>
+            <p>{{ $t("footer.sub_content") }}</p>
           </div>
           <div class="enter-email">
             <input class="input-email" type="" placeholder="Enter your email" />
@@ -74,6 +74,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleLanguageChange(event, store) {
+      store.commit("language/setLang", event.target.value);
+      location.reload();
+    },
   },
 };
 </script>

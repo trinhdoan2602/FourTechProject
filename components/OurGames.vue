@@ -1,13 +1,10 @@
 <template>
   <div class="content-our-games">
-    <h1 class="title">Our Games</h1>
+    <h1 class="title">{{ $t("our_games.title") }}</h1>
     <div class="row">
       <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1"></div>
       <p class="content col-xl-4 col-lg-6 col-md-8 col-sm-10 col-10">
-        As a pioneer of mobile app gamification, we take pride in originality and
-        individuality, providing global players with state-of-the-art games that feature
-        splendid storylines, sensational sound effects and magnificent animation that
-        never cease to impress.
+        {{ $t("our_games.content") }}
       </p>
       <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1"></div>
     </div>
@@ -65,6 +62,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleLanguageChange(event, store) {
+      store.commit("language/setLang", event.target.value);
+      location.reload();
+    },
   },
 };
 </script>

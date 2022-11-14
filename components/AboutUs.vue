@@ -3,15 +3,8 @@
     <div class="row">
       <div class="col-xl-2"></div>
       <div class="content-about-us-left col-xl-4 col-lg-8">
-        <h1>About Us</h1>
-        <p class="about">
-          Browse our selection of free online games and have a great time without leaving
-          the site! Our Kids Games option also includes game reviews, extensive game
-          cheats and walkthroughs, and much more. We have exclusive free downloads,
-          videos, and articles as well. Etech reviews the most popular kids games from all
-          the most popular video gaming platforms, so you don’t need to search around for
-          fun anywhere else on the Internet. Explore a whole new world of gaming on Etech.
-        </p>
+        <h1>{{ $t("about_us.title") }}</h1>
+        <p class="about">{{ $t("about_us.content") }}</p>
         <div class="row">
           <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
             <div class="block-user-game-color">
@@ -19,7 +12,7 @@
               <p class="user-m">M</p>
               <p>+</p>
             </div>
-            <p class="users-games">Users</p>
+            <p class="users-games">{{ $t("about_us.users") }}</p>
           </div>
           <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
             <div class="block-user-game-color">
@@ -27,7 +20,7 @@
               <p class="user-m"></p>
               <p>+</p>
             </div>
-            <p class="users-games">Games</p>
+            <p class="users-games">{{ $t("about_us.games") }}</p>
           </div>
         </div>
       </div>
@@ -39,8 +32,8 @@
             src="~/assets/images/hourAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>24 - Hour</h2>
-            <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
+            <h2>{{ $t("about_us.hour") }}</h2>
+            <p>{{ $t("about_us.hour_content") }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -51,12 +44,8 @@
             src="~/assets/images/designAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>Design</h2>
-            <p>
-              Combining imaginative universes, play dynamics, and unprecedented gameplay,
-              our games transcend the boundaries of the virtual world by weaving
-              innovative gameplay.
-            </p>
+            <h2>{{ $t("about_us.design") }}</h2>
+            <p>{{ $t("about_us.design_content") }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -67,12 +56,8 @@
             src="~/assets/images/teamAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>Team</h2>
-            <p>
-              Etech is an award-winning, international studio of designers, artists,
-              animators and producers that create content for the biggest names in film
-              and video games.
-            </p>
+            <h2>{{ $t("about_us.team") }}</h2>
+            <p>{{ $t("about_us.team_content") }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -112,6 +97,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleLanguageChange(event, store) {
+      store.commit("language/setLang", event.target.value);
+      location.reload();
+    },
   },
 };
 </script>
@@ -227,6 +218,42 @@ export default {
   text-align: center;
 }
 
+.about-us-img .img-cotien {
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes example {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+
+  25% {
+    bottom: 100px;
+    right: 100px;
+  }
+
+  50% {
+    bottom: 100px;
+    right: 0;
+  }
+
+  75% {
+    bottom: 0;
+    right: 100px;
+  }
+
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+
 .about-us-img .img-map {
   margin-top: -100px;
   width: 100%;
@@ -258,10 +285,6 @@ export default {
     margin-bottom: 16px;
   }
 
-  .about-us-img .img-cotien {
-    width: 60%;
-  }
-
   .about-us-img .img-map {
     margin-top: -50px;
     width: 100%;
@@ -275,6 +298,43 @@ export default {
 
   .block-user-game .users-games {
     margin-top: -20px;
+  }
+
+  .about-us-img .img-cotien {
+    width: 60%;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  }
+
+  @keyframes example {
+    0% {
+      bottom: 0;
+      right: 0;
+    }
+
+    25% {
+      bottom: 50px;
+      right: 50px;
+    }
+
+    50% {
+      bottom: 50px;
+      right: 0;
+    }
+
+    75% {
+      bottom: 0;
+      right: 50px;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 </style>

@@ -28,7 +28,7 @@
     "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.28.1",
     "vue": "^2.7.10",
-    "vue-i18n": "^9.2.2",
+    "vue-i18n": "^8.27.2",
     "vue-server-renderer": "^2.7.10",
     "vue-slick-carousel": "^1.0.6",
     "vue-template-compiler": "^2.7.10"

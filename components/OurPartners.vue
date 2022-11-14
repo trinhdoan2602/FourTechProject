@@ -1,6 +1,6 @@
 <template>
   <div class="content-our-partners">
-    <h1 class="title">Our Partners</h1>
+    <h1 class="title">{{ $t("our_partners.title") }}</h1>
     <VueSlickCarousel :arrows="true" v-bind="settings" class="slide-slick">
       <img class="img-block-slick" src="~/assets/images/imgslick1.png" alt="" />
       <img class="img-block-slick" src="~/assets/images/imgslick2.png" alt="" />
@@ -78,6 +78,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleLanguageChange(event, store) {
+      store.commit("language/setLang", event.target.value);
+      location.reload();
+    },
   },
 };
 </script>

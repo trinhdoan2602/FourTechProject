@@ -26,19 +26,23 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse col-xl-8">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">ABOUT US</a>
+                  <a class="nav-link" href="#">{{ $t("header.about") }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">GAMES</a>
+                  <a class="nav-link" href="#">{{ $t("header.games") }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">PARTNERS</a>
+                  <a class="nav-link" href="#">{{ $t("header.partners") }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CONTACT US</a>
+                  <a class="nav-link" href="#">{{ $t("header.contact") }} US</a>
                 </li>
                 <li>
-                  <select class="form-control">
+                  <select
+                    v-model="lang"
+                    class="form-control"
+                    @change="handleLanguageChange($event, $store)"
+                  >
                     <option value="en">English</option>
                     <option value="vn">Việt Nam</option>
                   </select>
@@ -50,14 +54,11 @@
         <div class="row">
           <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12"></div>
           <div class="content-header col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
-            <h1>We're Getting Ready</h1>
+            <h1>{{ $t("header.title") }}</h1>
             <div class="row">
               <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1"></div>
               <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                <p>
-                  We will back to something amazing. Getting the latest updates about our
-                  games. Please sign up to our newsletter.
-                </p>
+                <p>{{ $t("header.we_will") }}</p>
                 <div class="enter-email">
                   <input type="" placeholder="Enter your email" />
                   <img class="arrow-right" src="~/assets/images/arrowRight.png" />
@@ -88,6 +89,10 @@
 <script>
 export default {
   name: "NuxtHeader",
+  data() {
+    const lang = process.client ? localStorage.getItem("lang") || "en" : "";
+    return { lang };
+  },
   head() {
     return {
       link: [
@@ -109,6 +114,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleLanguageChange(event, store) {
+      store.commit("language/setLang", event.target.value);
+      location.reload();
+    },
   },
 };
 </script>
@@ -268,6 +279,18 @@ body {
     height: 100%;
     margin-top: -150px;
     margin-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav-bar ul {
+    float: initial;
+    z-index: 2;
   }
 }
 

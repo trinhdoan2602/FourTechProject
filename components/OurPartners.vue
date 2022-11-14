@@ -131,9 +131,23 @@ export default {
 }
 
 @media only screen and (max-width: 576px) {
+  .content-our-partners {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .content-our-partners .title {
+    margin-bottom: 80px;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    color: #000;
+  }
+
   .content-our-partners .slide-slick {
-  margin-left: 40px;
-  margin-right: 40px;
-}
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 </style>

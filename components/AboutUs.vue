@@ -1,84 +1,84 @@
 <template>
-  <div id="about-us" class="row">
-    <div class="col-xl-2"></div>
-    <div class="content-about-us-left col-xl-4 col-lg-8">
-      <h1>About Us</h1>
-      <p class="about">
-        Browse our selection of free online games and have a great time without leaving
-        the site! Our Kids Games option also includes game reviews, extensive game cheats
-        and walkthroughs, and much more. We have exclusive free downloads, videos, and
-        articles as well. Etech reviews the most popular kids games from all the most
-        popular video gaming platforms, so you don’t need to search around for fun
-        anywhere else on the Internet. Explore a whole new world of gaming on Etech.
-      </p>
-      <div class="block-user-game row">
-        <div class="col-xl-12 col-lg-6">
-          <div class="block-user-game-color">
-            <p>600</p>
-            <p class="user-m">M</p>
-            <p>+</p>
+  <div id="about-us">
+    <div class="row">
+      <div class="col-xl-2"></div>
+      <div class="content-about-us-left col-xl-4 col-lg-8">
+        <h1>About Us</h1>
+        <p class="about">
+          Browse our selection of free online games and have a great time without leaving
+          the site! Our Kids Games option also includes game reviews, extensive game
+          cheats and walkthroughs, and much more. We have exclusive free downloads,
+          videos, and articles as well. Etech reviews the most popular kids games from all
+          the most popular video gaming platforms, so you don’t need to search around for
+          fun anywhere else on the Internet. Explore a whole new world of gaming on Etech.
+        </p>
+        <div class="row">
+          <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
+            <div class="block-user-game-color">
+              <p>600</p>
+              <p class="user-m">M</p>
+              <p>+</p>
+            </div>
+            <p class="users-games">Users</p>
           </div>
-          <p class="users-games">Users</p>
-        </div>
-      </div>
-      <div class="block-user-game">
-        <div class="col-xl-12 col-lg-6">
-          <div class="block-user-game-color">
-            <p>135</p>
-            <p class="user-m"></p>
-            <p>+</p>
+          <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
+            <div class="block-user-game-color">
+              <p>135</p>
+              <p class="user-m"></p>
+              <p>+</p>
+            </div>
+            <p class="users-games">Games</p>
           </div>
-          <p class="users-games">Games</p>
         </div>
       </div>
+      <div class="content-about-us-right col-xl-4 col-lg-8">
+        <div class="block-us-right row">
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+          <img
+            class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
+            src="~/assets/images/hourAboutUs.png"
+          />
+          <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+            <h2>24 - Hour</h2>
+            <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
+          </div>
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+        </div>
+        <div class="block-us-right row">
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+          <img
+            class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
+            src="~/assets/images/designAboutUs.png"
+          />
+          <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+            <h2>Design</h2>
+            <p>
+              Combining imaginative universes, play dynamics, and unprecedented gameplay,
+              our games transcend the boundaries of the virtual world by weaving
+              innovative gameplay.
+            </p>
+          </div>
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+        </div>
+        <div class="block-us-right row">
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+          <img
+            class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
+            src="~/assets/images/teamAboutUs.png"
+          />
+          <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+            <h2>Team</h2>
+            <p>
+              Etech is an award-winning, international studio of designers, artists,
+              animators and producers that create content for the biggest names in film
+              and video games.
+            </p>
+          </div>
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+        </div>
+      </div>
+      <div class="col-xl-2"></div>
     </div>
-    <div class="content-about-us-right col-xl-4 col-lg-8">
-      <div class="block-us-right row">
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-        <img
-          class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
-          src="~/assets/images/hourAboutUs.png"
-        />
-        <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-          <h2>24 - Hour</h2>
-          <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
-        </div>
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-      </div>
-      <div class="block-us-right row">
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-        <img
-          class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
-          src="~/assets/images/designAboutUs.png"
-        />
-        <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-          <h2>Design</h2>
-          <p>
-            Combining imaginative universes, play dynamics, and unprecedented gameplay,
-            our games transcend the boundaries of the virtual world by weaving innovative
-            gameplay.
-          </p>
-        </div>
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-      </div>
-      <div class="block-us-right row">
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-        <img
-          class="icon-about-us col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"
-          src="~/assets/images/teamAboutUs.png"
-        />
-        <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-          <h2>Team</h2>
-          <p>
-            Etech is an award-winning, international studio of designers, artists,
-            animators and producers that create content for the biggest names in film and
-            video games.
-          </p>
-        </div>
-        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
-      </div>
-    </div>
-    <div class="col-xl-2"></div>
     <div class="about-us-img">
       <img class="img-cotien" src="~/assets/images/coTien.png" alt="" />
       <div class="container">
@@ -99,6 +99,15 @@ export default {
           rel: "stylesheet",
           integrity:
             "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
+          crossorigin: "anonymous",
+        },
+      ],
+      script: [
+        {
+          src:
+            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+          integrity:
+            "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
           crossorigin: "anonymous",
         },
       ],
@@ -192,6 +201,10 @@ export default {
   height: 50px;
 }
 
+.content-right {
+  margin-top: -83px;
+}
+
 .content-about-us-right h2 {
   font-style: normal;
   font-weight: 700;
@@ -220,6 +233,31 @@ export default {
 }
 
 @media only screen and (max-width: 720px) {
+  #about-us {
+    margin-top: 40px;
+  }
+
+  .block-user-game-color {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
+  .block-user-game-color .user-m {
+    font-size: 20px;
+    margin: -10px;
+  }
+
+  .content-about-us-left .about {
+    margin-bottom: 0;
+  }
+
+  .content-about-us-left h1 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    margin-bottom: 16px;
+  }
+
   .about-us-img .img-cotien {
     width: 60%;
   }
@@ -227,6 +265,16 @@ export default {
   .about-us-img .img-map {
     margin-top: -50px;
     width: 100%;
+  }
+
+  .content-about-us-right {
+    padding-top: 40px;
+    padding-bottom: 0;
+    background-color: #eee;
+  }
+
+  .block-user-game .users-games {
+    margin-top: -20px;
   }
 }
 </style>

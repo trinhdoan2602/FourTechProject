@@ -23,7 +23,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse col-xl-8" id="navbarSupportedContent">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse col-xl-8">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="#">ABOUT US</a>
@@ -37,21 +37,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">CONTACT US</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                    <li><a class="dropdown-item" href="#">Việt Nam</a></li>
-                  </ul>
+                <li>
+                  <select class="form-control">
+                    <option value="en">English</option>
+                    <option value="vn">Việt Nam</option>
+                  </select>
                 </li>
               </ul>
             </div>

@@ -5,6 +5,7 @@
     <OurGames />
     <OurPartners />
     <Footer />
+    <CopyRight />
   </div>
 </template>
 

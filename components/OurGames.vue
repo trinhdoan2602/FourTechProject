@@ -17,17 +17,23 @@
         <img class="img-block-card" src="~/assets/images/cardGames2.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames3.png" alt="" />
       </div>
-      <div class="block-games-cards block-games-cards-chan block-games-cards-chan-mobile col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+      <div
+        class="block-games-cards block-games-cards-chan block-games-cards-chan-mobile col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6"
+      >
         <img class="img-block-card" src="~/assets/images/cardGames4.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames5.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames6.png" alt="" />
       </div>
-      <div class="block-games-cards col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+      <div
+        class="block-games-cards block-games-cards-chan-mobile-2 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6"
+      >
         <img class="img-block-card" src="~/assets/images/cardGames7.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames8.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames9.png" alt="" />
       </div>
-      <div class="block-games-cards block-games-cards-chan col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+      <div
+        class="block-games-cards block-games-cards-chan col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6"
+      >
         <img class="img-block-card" src="~/assets/images/cardGames10.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames11.png" alt="" />
         <img class="img-block-card" src="~/assets/images/cardGames12.png" alt="" />
@@ -105,12 +111,33 @@ export default {
 }
 
 @media only screen and (max-width: 991px) {
+  .content-our-games {
+    margin-top: 50.77px;
+    margin-bottom: 48px;
+  }
+
+  .content-our-games .title {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+  }
+
   .content-our-games .block-games-cards-chan {
-  margin-top: 0;
+    margin-top: 0;
+  }
+
+  .block-games-cards-chan-mobile {
+    margin-top: 60px !important;
+  }
+
+  .block-games-cards-chan-mobile-2 {
+    margin-top: -50px !important;
+  }
 }
 
-.block-games-cards-chan-mobile {
-  margin-top: 60px !important;
-}
+@media only screen and (max-width: 450px) {
+  .block-games-cards-chan-mobile-2 {
+    margin-top: -57px !important;
+  }
 }
 </style>

@@ -23,19 +23,22 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbarSupportedContent" class="collapse navbar-collapse col-xl-8">
+            <div
+              id="navbarSupportedContent"
+              class="collapse navbar-collapse col-xl-8"
+            >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t("header.about") }}</a>
+                  <a class="nav-link" href="#">{{ $t('header.about') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t("header.games") }}</a>
+                  <a class="nav-link" href="#">{{ $t('header.games') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t("header.partners") }}</a>
+                  <a class="nav-link" href="#">{{ $t('header.partners') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t("header.contact") }} US</a>
+                  <a class="nav-link" href="#">{{ $t('header.contact') }} US</a>
                 </li>
                 <li>
                   <select
@@ -53,15 +56,22 @@
         </nav>
         <div class="row">
           <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12"></div>
-          <div class="content-header col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
-            <h1>{{ $t("header.title") }}</h1>
+          <div
+            class="content-header col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12"
+          >
+            <h1>{{ $t('header.title') }}</h1>
             <div class="row">
               <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1"></div>
               <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                <p>{{ $t("header.we_will") }}</p>
+                <p>{{ $t('header.we_will') }}</p>
                 <div class="enter-email">
                   <input type="" placeholder="Enter your email" />
-                  <img class="arrow-right" src="~/assets/images/arrowRight.png" />
+                  <a href="">
+                    <img
+                      class="arrow-right"
+                      src="~/assets/images/arrowRight.png"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1"></div>
@@ -88,40 +98,39 @@
 
 <script>
 export default {
-  name: "NuxtHeader",
+  name: 'NuxtHeader',
   data() {
-    const lang = process.client ? localStorage.getItem("lang") || "en" : "";
-    return { lang };
+    const lang = process.client ? localStorage.getItem('lang') || 'en' : ''
+    return { lang }
   },
   head() {
     return {
       link: [
         {
-          href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
-          rel: "stylesheet",
+          href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+          rel: 'stylesheet',
           integrity:
-            "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
-          crossorigin: "anonymous",
+            'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
+          crossorigin: 'anonymous',
         },
       ],
       script: [
         {
-          src:
-            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
           integrity:
-            "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
-          crossorigin: "anonymous",
+            'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
+          crossorigin: 'anonymous',
         },
       ],
-    };
+    }
   },
   methods: {
     handleLanguageChange(event, store) {
-      store.commit("language/setLang", event.target.value);
-      location.reload();
+      store.commit('language/setLang', event.target.value)
+      location.reload()
     },
   },
-};
+}
 </script>
 
 <style>
@@ -136,7 +145,7 @@ body {
 
 #header {
   height: 988.64px;
-  background-image: url("~/assets/images/backgroundHeader.png");
+  background-image: url('~/assets/images/backgroundHeader.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto auto;
@@ -297,7 +306,7 @@ body {
 @media only screen and (max-width: 960px) {
   #header {
     height: 800px;
-    background-image: url("~/assets/images/backGroundHeaderMobile.png");
+    background-image: url('~/assets/images/backGroundHeaderMobile.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
@@ -307,7 +316,7 @@ body {
 @media only screen and (max-width: 720px) {
   #header {
     height: 608px;
-    background-image: url("~/assets/images/backGroundHeaderMobile.png");
+    background-image: url('~/assets/images/backGroundHeaderMobile.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;

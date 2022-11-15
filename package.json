@@ -17,7 +17,7 @@
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache",
     "*.{css,scss,sass,html,vue}": "stylelint",
-    "*.**": "prettier --check --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@nuxt/content": "^1.0.0",
@@ -46,10 +46,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "postcss-html": "^1.5.0",
-    "prettier": "^2.7.1",
+    "prettier": "2.7.1",
     "sass": "^1.56.1",
     "sass-loader": "10",
     "stylelint": "^14.13.0",

@@ -29,16 +29,24 @@
             >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t('header.about') }}</a>
+                  <a class="nav-link" href="#about-us">{{
+                    $t('header.about')
+                  }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t('header.games') }}</a>
+                  <a class="nav-link" href="#our-games">{{
+                    $t('header.games')
+                  }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t('header.partners') }}</a>
+                  <a class="nav-link" href="#our-partners">{{
+                    $t('header.partners')
+                  }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">{{ $t('header.contact') }} US</a>
+                  <a class="nav-link" href="#footer">{{
+                    $t('header.contact')
+                  }}</a>
                 </li>
                 <li>
                   <select
@@ -60,6 +68,27 @@
             class="content-header col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12"
           >
             <h1>{{ $t('header.title') }}</h1>
+            <div class="countdown">
+              <div class="container-day">
+                <h3 class="day">30</h3>
+                <h3 class="duoi-count-down">{{ $t('header.days') }}</h3>
+              </div>
+              <div class="hai-cham">:</div>
+              <div class="container-hour">
+                <h3 class="hour">18</h3>
+                <h3 class="duoi-count-down">{{ $t('header.hours') }}</h3>
+              </div>
+              <div class="hai-cham">:</div>
+              <div class="container-minute">
+                <h3 class="minute">20</h3>
+                <h3 class="duoi-count-down">{{ $t('header.minutes') }}</h3>
+              </div>
+              <div class="hai-cham">:</div>
+              <div class="container-second">
+                <h3 class="second">11</h3>
+                <h3 class="duoi-count-down">{{ $t('header.second') }}</h3>
+              </div>
+            </div>
             <div class="row">
               <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1"></div>
               <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
@@ -182,10 +211,6 @@ body {
   color: #fff;
 }
 
-.navbar-toggler {
-  float: right;
-}
-
 .nav-bar {
   width: 100%;
   top: 0;
@@ -273,6 +298,32 @@ body {
   margin-left: -40.75px;
 }
 
+.countdown {
+  padding: 25px;
+  border-radius: 21px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #fff;
+}
+
+.day,
+.hour,
+.minute,
+.second,
+.hai-cham {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: 4.8px;
+}
+
+.waiting {
+  height: 50vh;
+}
+
 @media only screen and (max-width: 1140px) {
   .img-ongtien-header {
     visibility: hidden;
@@ -300,6 +351,38 @@ body {
   .nav-bar ul {
     float: initial;
     z-index: 2;
+  }
+
+  .countdown {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 20px;
+    border-radius: 21px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .day,
+  .hour,
+  .minute,
+  .second,
+  .hai-cham {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 10px;
+    text-align: center;
+    letter-spacing: 0.8px;
+  }
+
+  .duoi-count-down {
+    font-size: 20px;
+  }
+
+  .waiting {
+    height: 30vh;
   }
 }
 
@@ -353,6 +436,25 @@ body {
     letter-spacing: 0.9px;
     text-align: center;
     font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .day,
+  .hour,
+  .minute,
+  .second,
+  .hai-cham {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 10px;
+    text-align: center;
+    letter-spacing: 0.8px;
+  }
+
+  .duoi-count-down {
+    font-size: 15px;
   }
 }
 </style>

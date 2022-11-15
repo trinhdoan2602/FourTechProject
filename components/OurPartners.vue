@@ -1,6 +1,6 @@
 <template>
-  <div class="content-our-partners">
-    <h1 class="title">{{ $t("our_partners.title") }}</h1>
+  <div id="our-partners" class="content-our-partners">
+    <h1 class="title">{{ $t('our_partners.title') }}</h1>
     <VueSlickCarousel :arrows="true" v-bind="settings" class="slide-slick">
       <img class="img-block-slick" src="~/assets/images/imgslick1.png" alt="" />
       <img class="img-block-slick" src="~/assets/images/imgslick2.png" alt="" />
@@ -14,11 +14,11 @@
   </div>
 </template>
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
-  name: "NuxtOurPartners",
+  name: 'NuxtOurPartners',
   components: { VueSlickCarousel },
   data() {
     return {
@@ -55,37 +55,36 @@ export default {
           },
         ],
       },
-    };
+    }
   },
   head() {
     return {
       link: [
         {
-          href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
-          rel: "stylesheet",
+          href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+          rel: 'stylesheet',
           integrity:
-            "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
-          crossorigin: "anonymous",
+            'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
+          crossorigin: 'anonymous',
         },
       ],
       script: [
         {
-          src:
-            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
           integrity:
-            "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
-          crossorigin: "anonymous",
+            'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
+          crossorigin: 'anonymous',
         },
       ],
-    };
+    }
   },
   methods: {
     handleLanguageChange(event, store) {
-      store.commit("language/setLang", event.target.value);
-      location.reload();
+      store.commit('language/setLang', event.target.value)
+      location.reload()
     },
   },
-};
+}
 </script>
 
 <style>

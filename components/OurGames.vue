@@ -1,5 +1,5 @@
 <template>
-  <div class="content-our-games">
+  <div id="our-games" class="content-our-games">
     <h1 class="title">{{ $t('our_games.title') }}</h1>
     <div class="row">
       <div class="col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1"></div>

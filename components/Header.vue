@@ -406,7 +406,6 @@ body {
   }
 
   .form-select {
-    background-color: 'transparent' !important;
     width: auto;
     margin-left: calc(50% - 55px);
   }

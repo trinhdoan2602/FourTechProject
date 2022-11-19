@@ -228,13 +228,6 @@ body {
   background-size: 100%;
 }
 
-.form-select {
-  background-color: 'transparent' !important;
-  width: auto;
-  color: #fff;
-  border: none;
-}
-
 .bg-light {
   background-color: transparent !important;
 }

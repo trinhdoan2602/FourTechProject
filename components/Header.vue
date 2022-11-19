@@ -231,6 +231,8 @@ body {
 .form-select {
   background-color: 'transparent' !important;
   width: auto;
+  color: #fff;
+  border: none;
 }
 
 .bg-light {

@@ -25,7 +25,22 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
+    '@nuxtjs/google-fonts',
   ],
+
+  googleFonts: {
+    families: {
+      // a simple name
+      Montserrat: true,
+
+      // a name with spaces
+      'Playfair+Display': true,
+
+      // specific font weights
+      // Lato: [100, 300],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

@@ -8,12 +8,11 @@
         >
           <div class="container-fluid row">
             <img
-              class="logo col-xl-1 col-lg-2 col-md-2 col-sm-2 col-2"
+              class="logo navbar-brand col-xl-1 col-lg-2 col-md-2 col-sm-2 col-2"
               src="~/assets/images/logo.png"
             />
-            <div class="col-xl-3 col-lg-8 col-md-8 col-sm-8 col-7"></div>
             <button
-              class="navbar-toggler col-xl-1 col-lg-2 col-md-2 col-sm-2 col-3"
+              class="navbar-toggler col-xl-0 col-lg-0 col-md-2 col-sm-2 col-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -25,9 +24,9 @@
             </button>
             <div
               id="navbarSupportedContent"
-              class="collapse navbar-collapse col-xl-8"
+              class="collapse navbar-collapse col-xl-11 col-lg-10 col-md-8 col-sm-8 col-8"
             >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="#about-us">{{
                     $t('header.about')
@@ -51,7 +50,7 @@
                 <li>
                   <select
                     v-model="lang"
-                    class="form-control"
+                    class="form-select"
                     @change="handleLanguageChange($event, $store)"
                   >
                     <option value="en">English</option>
@@ -67,7 +66,9 @@
           <div
             class="content-header col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12"
           >
-            <h1>{{ $t('header.title') }}</h1>
+            <div class="block-header">
+              <h1 class="header-title">{{ $t('header.title') }}</h1>
+            </div>
             <div class="countdown">
               <div class="container-day">
                 <h3 class="day">30</h3>
@@ -92,7 +93,7 @@
             <div class="row">
               <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1"></div>
               <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
-                <p>{{ $t('header.we_will') }}</p>
+                <p class="we-will">{{ $t('header.we_will') }}</p>
                 <div class="enter-email">
                   <input type="" placeholder="Enter your email" />
                   <a href="">
@@ -176,8 +177,7 @@ body {
   height: 988.64px;
   background-image: url('~/assets/images/backgroundHeader.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: auto auto;
+  background-size: 100% auto;
 }
 
 .img-ongtien-header {
@@ -197,10 +197,40 @@ body {
 
 #header header .logo {
   margin-top: 20px;
-  margin-left: 79px;
-  float: left;
+  margin-left: 4.11%;
   z-index: 3;
   cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+.navbar-toggler {
+  margin-top: 20px;
+  margin-right: 4.11%;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+  padding: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url('~/assets/images/menu.png') !important;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.form-select {
+  background-color: 'transparent' !important;
+  width: auto;
 }
 
 .bg-light {
@@ -209,6 +239,7 @@ body {
 
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
+  font-family: Montserrat, sans-serif;
 }
 
 .nav-bar {
@@ -230,8 +261,9 @@ body {
   font-weight: 700;
   line-height: 18px;
   display: inline-block;
+  align-items: center;
   margin-top: 40px;
-  margin-left: 84px;
+  margin-right: 80px;
 }
 
 .nav-bar .language-select {
@@ -245,6 +277,7 @@ body {
 }
 
 .content-header h1 {
+  font-family: Montserrat, sans-serif;
   margin-top: 132px;
   margin-bottom: 21px;
   color: #fff;
@@ -312,6 +345,7 @@ body {
 .minute,
 .second,
 .hai-cham {
+  font-family: 'Playfair Display', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
@@ -320,8 +354,23 @@ body {
   letter-spacing: 4.8px;
 }
 
+.we-will {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 126%;
+  text-align: center;
+  color: #fff;
+}
+
 .waiting {
   height: 50vh;
+}
+
+.navbar-collapse {
+  text-align: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1140px) {
@@ -340,6 +389,10 @@ body {
     margin-top: -150px;
     margin-left: 150px;
   }
+
+  .nav-bar li {
+    margin-right: 50px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -351,6 +404,16 @@ body {
   .nav-bar ul {
     float: initial;
     z-index: 2;
+  }
+
+  .nav-bar li {
+    margin-right: 0;
+  }
+
+  .form-select {
+    background-color: 'transparent' !important;
+    width: auto;
+    margin-left: calc(50% - 55px);
   }
 
   .countdown {
@@ -378,7 +441,12 @@ body {
   }
 
   .duoi-count-down {
-    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.6px;
   }
 
   .waiting {

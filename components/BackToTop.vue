@@ -57,8 +57,12 @@ export default {
     opacity: 0.9;
   }
   img {
-    width: 2rem;
-    height: 2rem;
+    text-align: center;
+    width: 66.67px;
+    height: 66.67px;
+    width: auto;
+    height: auto;
+    rotate: (180deg);
   }
 }
 </style>

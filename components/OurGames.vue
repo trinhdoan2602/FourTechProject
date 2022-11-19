@@ -89,27 +89,6 @@
 <script>
 export default {
   name: 'NuxtOurGames',
-  head() {
-    return {
-      link: [
-        {
-          href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
-          rel: 'stylesheet',
-          integrity:
-            'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
-          crossorigin: 'anonymous',
-        },
-      ],
-      script: [
-        {
-          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-          integrity:
-            'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
-          crossorigin: 'anonymous',
-        },
-      ],
-    }
-  },
   methods: {
     handleLanguageChange(event, store) {
       store.commit('language/setLang', event.target.value)
@@ -127,6 +106,7 @@ export default {
 }
 
 .content-our-games .title {
+  font-family: 'Playfair Display', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
@@ -137,6 +117,7 @@ export default {
 }
 
 .content-our-games .content {
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

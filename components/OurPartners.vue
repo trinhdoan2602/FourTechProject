@@ -57,27 +57,6 @@ export default {
       },
     }
   },
-  head() {
-    return {
-      link: [
-        {
-          href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
-          rel: 'stylesheet',
-          integrity:
-            'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
-          crossorigin: 'anonymous',
-        },
-      ],
-      script: [
-        {
-          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-          integrity:
-            'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
-          crossorigin: 'anonymous',
-        },
-      ],
-    }
-  },
   methods: {
     handleLanguageChange(event, store) {
       store.commit('language/setLang', event.target.value)
@@ -95,8 +74,8 @@ export default {
   position: absolute;
   top: 50%;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 33.33px;
+  height: 33.33px;
   padding: 0;
   transform: translate(0, -50%);
   cursor: pointer;
@@ -104,7 +83,7 @@ export default {
   border: none;
   outline: none;
   background: #333;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .content-our-partners {
@@ -116,6 +95,7 @@ export default {
 }
 
 .content-our-partners .title {
+  font-family: 'Playfair Display', sans-serif;
   margin-bottom: 80px;
   font-style: normal;
   font-weight: 900;

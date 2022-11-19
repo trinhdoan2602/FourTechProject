@@ -1,26 +1,30 @@
 <template>
-  <div id="about-us">
+  <div id="about-us" class="container">
     <div class="row">
       <div class="col-xl-2"></div>
       <div class="content-about-us-left col-xl-4 col-lg-8">
-        <h1>{{ $t("about_us.title") }}</h1>
-        <p class="about">{{ $t("about_us.content") }}</p>
+        <h1>{{ $t('about_us.title') }}</h1>
+        <p class="about">{{ $t('about_us.content') }}</p>
         <div class="row">
-          <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
+          <div
+            class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6"
+          >
             <div class="block-user-game-color">
               <p>600</p>
               <p class="user-m">M</p>
               <p>+</p>
             </div>
-            <p class="users-games">{{ $t("about_us.users") }}</p>
+            <p class="users-games">{{ $t('about_us.users') }}</p>
           </div>
-          <div class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6">
+          <div
+            class="block-user-game col-xl-12 col-lg-6 col-md-6 col-sm-6 col-6"
+          >
             <div class="block-user-game-color">
               <p>135</p>
               <p class="user-m"></p>
               <p>+</p>
             </div>
-            <p class="users-games">{{ $t("about_us.games") }}</p>
+            <p class="users-games">{{ $t('about_us.games') }}</p>
           </div>
         </div>
       </div>
@@ -32,8 +36,8 @@
             src="~/assets/images/hourAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>{{ $t("about_us.hour") }}</h2>
-            <p>{{ $t("about_us.hour_content") }}</p>
+            <h2>{{ $t('about_us.hour') }}</h2>
+            <p>{{ $t('about_us.hour_content') }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -44,8 +48,8 @@
             src="~/assets/images/designAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>{{ $t("about_us.design") }}</h2>
-            <p>{{ $t("about_us.design_content") }}</p>
+            <h2>{{ $t('about_us.design') }}</h2>
+            <p>{{ $t('about_us.design_content') }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -56,8 +60,8 @@
             src="~/assets/images/teamAboutUs.png"
           />
           <div class="content-right col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
-            <h2>{{ $t("about_us.team") }}</h2>
-            <p>{{ $t("about_us.team_content") }}</p>
+            <h2>{{ $t('about_us.team') }}</h2>
+            <p>{{ $t('about_us.team_content') }}</p>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
         </div>
@@ -75,36 +79,14 @@
 
 <script>
 export default {
-  name: "NuxtAboutUs",
-  head() {
-    return {
-      link: [
-        {
-          href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
-          rel: "stylesheet",
-          integrity:
-            "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
-          crossorigin: "anonymous",
-        },
-      ],
-      script: [
-        {
-          src:
-            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
-          integrity:
-            "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
-          crossorigin: "anonymous",
-        },
-      ],
-    };
-  },
+  name: 'NuxtAboutUs',
   methods: {
     handleLanguageChange(event, store) {
-      store.commit("language/setLang", event.target.value);
-      location.reload();
+      store.commit('language/setLang', event.target.value)
+      location.reload()
     },
   },
-};
+}
 </script>
 
 <style>
@@ -127,6 +109,7 @@ export default {
 }
 
 .content-about-us-left h1 {
+  font-family: 'Playfair Display', sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
@@ -137,6 +120,7 @@ export default {
 }
 
 .content-about-us-left .about {
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -150,6 +134,7 @@ export default {
 }
 
 .block-user-game-color {
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 80px;
@@ -168,6 +153,7 @@ export default {
 }
 
 .block-user-game .users-games {
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -176,6 +162,7 @@ export default {
 }
 
 .content-about-us-right {
+  font-family: Montserrat, sans-serif;
   height: 100%;
   padding-top: 100px;
   padding-bottom: 58.38px;
